@@ -46,7 +46,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 int main(int argc, char *argv[])
-{
+{	
 
         s_fparams *params = get_fpocket_args(argc, argv);
 

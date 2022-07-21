@@ -123,7 +123,7 @@ void write_pdb_atom_line(FILE *f, const char rec_name[], int id, const char atom
 		finalabpa = abpa_prob;
 
 
-	status = fprintf(f, "%-6s%5s %4s%c%-4s%s%4s%c   %8.3f%8.3f%8.3f%6.2f%6.2f          %2s%2s\n",
+	status = fprintf(f, "%-6s%5s %4s%c%-4s%s%4s%c   %8.3f %8.3f %8.3f% 6.2f %6.2f          %2s%2s\n",
 					 rec_name, id_buf, atom_name, alt_loc, res_name, chain,
 					 res_id_buf, insert_buf, x, y, z, finalabpa, bfactor, symbol, charge_buf);
 
@@ -199,9 +199,10 @@ void write_pqr_atom_line(FILE *f, const char *rec_name, int id, const char *atom
 */
 
 	//printf("i%s \t",chain);
-	status = fprintf(f, "%-6s%5s %4s%c%-4s%s%4s%c   %8.3f%8.3f%8.3f  %6.2f   %6.2f\n",
+	status = fprintf(f, "%-6s%5s %4s%c%-4s%s%4s%c   %8.4f %8.4f %8.4f  %6.2f   %6.2f\n",
 					 rec_name, id_buf, atom_name, alt_loc, res_name, chain,
 					 res_id_buf, insert, x, y, z, charge, radius);
+
 }
 
 void write_mmcif_atom_line(FILE *f, const char rec_name[], int id, const char atom_name[],

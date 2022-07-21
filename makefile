@@ -2,7 +2,7 @@
 # Makefile.
 #------------------------------------------------------------
 #ARCH	    = MACOSXX86_64
-ARCH	    = LINUXAMD64
+ARCH	    = OPENPOWER
 export ARCH
 
 PLUGINDIR   = plugins
@@ -19,6 +19,10 @@ BINDIR  = /usr/local/bin/
 LIBDIR  = /usr/local/lib/
 
 MANDIR  = /usr/local/man/man8/
+
+#BINDIR = ../prova/bin/
+#LIBDIR = ../prova/lib/
+#MANDIR = ../prova/local/man/man8
 
 
 FPOCKET     = fpocket
@@ -180,6 +184,7 @@ $(PATH_BIN)$(MDPOCKET): $(MDPOBJ) $(QOBJS)
 install:
 	mkdir -p $(BINDIR)
 	mkdir -p $(MANDIR)
+	mkdir -p $(LIBDIR)
 	cp $(PATH_BIN)$(FPOCKET) $(BINDIR)
 	cp $(PATH_BIN)$(TPOCKET) $(BINDIR)
 	cp $(PATH_BIN)$(DPOCKET) $(BINDIR)
